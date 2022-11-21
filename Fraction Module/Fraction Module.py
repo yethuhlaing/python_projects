@@ -1,0 +1,22 @@
+print("Give the first fraction.")
+numerator1 = int(input("Give numerator (top):\n"))
+denominator1 = int(input("Give denominator (bottom):\n"))
+print("Give the second fraction.")
+numerator2 = int(input("Give numerator (top):\n"))
+denominator2 = int(input("Give denominator (bottom):\n"))
+exp = int(input("Give an exponent:\n"))
+
+from fractions import Fraction
+firstNum = Fraction(numerator1, denominator1)
+secondNum = Fraction(numerator2, denominator2)
+summ = Fraction(firstNum + secondNum)
+sub = Fraction(firstNum - secondNum)
+mut = Fraction(firstNum * secondNum)
+div = Fraction(firstNum / secondNum)
+pov = Fraction(pow(firstNum,exp))
+print("Sum: {}/{} + {}/{} = {}".format(numerator1,denominator1,numerator2,denominator2, summ))
+print("Subtract: {}/{} - {}/{} = {}".format(numerator1,denominator1,numerator2,denominator2, sub))
+print("Multiply: {}/{} * {}/{} = {}".format(numerator1,denominator1,numerator2,denominator2, mut))
+print("Divide: {}/{} / {}/{} = {}".format(numerator1,denominator1,numerator2,denominator2, div))
+print("Power: {}/{} ** {} = {}".format(numerator1,denominator1,exp,pov))
+
